@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book a Ride | Antos RideGo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">Antos RideGo</a>
+
+            <div class="nav-actions">
+                <a href="index.html" class="text-link">Home</a>
+
+                <button id="logoutButton" class="logout-button">
+                    Sign Out
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="booking-page">
+
+        <section class="booking-card">
+            <p class="tagline">BOOK YOUR NEXT TRIP</p>
+
+            <h1>Where would you like to go?</h1>
+
+            <p class="page-intro">
+                Enter your journey details, choose a ride type, and get your fare estimate.
+            </p>
+
+            <form id="bookingForm">
+
+                <label for="pickup">Pickup Location</label>
+                <input
+                    type="text"
+                    id="pickup"
+                    placeholder="e.g. Terminus"
+                    required
+                >
+
+                <label for="destination">Destination</label>
+                <input
+                    type="text"
+                    id="destination"
+                    placeholder="e.g. Rayfield"
+                    required
+                >
+
+                <label for="rideType">Ride Type</label>
+                <select id="rideType" required>
+                    <option value="">Select a ride type</option>
+                    <option value="Economy">Economy — ₦1,500</option>
+                    <option value="Standard">Standard — ₦3,500</option>
+                    <option value="Premium">Premium — ₦6,000</option>
+                </select>
+
+                <label for="date">Pickup Date</label>
+                <input type="date" id="date" required>
+
+                <label for="time">Pickup Time</label>
+                <input type="time" id="time" required>
+
+                <div class="fare-box">
+                    <span>Estimated Fare</span>
+                    <strong id="fareEstimate">₦0</strong>
+                </div>
+
+                <button type="submit" class="button primary-button">
+                    Confirm Booking
+                </button>
+            </form>
+
+            <p id="bookingMessage" class="form-message"></p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
